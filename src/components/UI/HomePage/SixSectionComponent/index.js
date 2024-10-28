@@ -1,4 +1,5 @@
 import React from "react";
+import Accordanation from "../../../Constants/Accordanation";
 
 const SixSectionComponent = () => {
   return (
@@ -14,30 +15,7 @@ const SixSectionComponent = () => {
       <div className="py-3 sm:py-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-14 items-center">
         <div className="bg-white h-[400px] rounded-2xl"></div>
         <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-2">
-            <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
-            <div>
-              <h1 className="text-base sm:text-2xl font-normal text-[#F3F1EC]">
-                Privacy
-              </h1>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
-            <div>
-              <h1 className="text-base sm:text-2xl font-normal text-[#F3F1EC]">
-                Secure integration
-              </h1>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
-            <div>
-              <h1 className="text-base sm:text-2xl font-normal text-[#F3F1EC]">
-                Secure integration
-              </h1>
-            </div>
-          </div>
+          <Accordanation />
         </div>
       </div>
     </div>
