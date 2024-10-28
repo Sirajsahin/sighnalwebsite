@@ -7,8 +7,8 @@ const ThirdSectionComponent = () => {
   //             </h1>
   //             <p className="text-base   w-[70%]"></p>
   return (
-    <div className="bg-[#F6F6F6] my-4 py-4 px-4 sm:px-10">
-      <h1 className="text-base sm:text-2xl sm:text-4xl font-normal pt-3 ">
+    <div className="bg-[#F6F6F6] my-4 py-4 px-4 sm:px-10 xl:px-14">
+      <h1 className="text-2xl sm:text-4xl font-normal pt-3 ">
         How Sighnal helps businesses to grow
       </h1>
       <p className="text-base sm:text-xl  w-full sm:w-[45%] pt-2">

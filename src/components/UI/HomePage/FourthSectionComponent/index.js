@@ -2,7 +2,7 @@ import React from "react";
 
 const FourthSectionComponent = () => {
   return (
-    <div className="bg-[#E9F0FF] my-0  sm:my-4 p-3 sm:p-6">
+    <div className="bg-[#E9F0FF] my-0  sm:my-4 p-3 sm:p-6 xl:p-14">
       <div className="py-3 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6">
         <div className="flex gap-3 items-center p-1 sm:p-6">
           <div className="w-full sm:w-[50%]">

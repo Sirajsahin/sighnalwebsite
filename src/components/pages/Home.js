@@ -10,13 +10,13 @@ import FIrstSectionComponent from "../UI/HomePage/FIrstSectionComponent";
 function Home() {
   return (
     <div>
-      <div className="m-3 sm:m-8">
+      <div className="m-3 sm:m-8 xl:mx-16 xl:my-10">
         <FIrstSectionComponent />
         <SecondComponent />
       </div>
       <ThirdSectionComponent />
       <FourthSectionComponent />
-      <div className="m-3 sm:m-8">
+      <div className="m-3 sm:m-8 xl:mx-16 xl:my-10">
         <FifthComponent />
       </div>
       <SixSectionComponent />

@@ -2,7 +2,7 @@ import React from "react";
 const FifthComponent = () => {
   return (
     <div className="">
-      <h1 className="text-base sm:text-2xl sm:text-4xl font-medium pt-2 sm:pt-5">
+      <h1 className="text-2xl sm:text-4xl font-medium pt-2 sm:pt-5">
         Get the Data You Need to Grow
       </h1>
       <p className="text-sm sm:text-base font-normal pt-1 sm:pt-2 ">

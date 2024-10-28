@@ -3,7 +3,7 @@ import React from "react";
 
 const SeventhSectionComponent = () => {
   return (
-    <div className="flex flex-col  items-center justify-center p-3 py-12 sm:py-24 gap-2 ">
+    <div className="flex flex-col  items-center justify-center p-3 py-12 sm:py-24 gap-2 xl:py-16 xl:p-8">
       <h1 className="text-2xl sm:text-4xl font-medium  ">
         See What’s Possible with Sighnal.
       </h1>

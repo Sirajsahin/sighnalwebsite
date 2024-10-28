@@ -2,7 +2,7 @@ import React from "react";
 
 const SixSectionComponent = () => {
   return (
-    <div className="bg-[#2D6759] my-0 sm:my-4 p-4 sm:p-8">
+    <div className="bg-[#2D6759] my-0 sm:my-4 p-4 sm:p-14">
       <h1 className="text-2xl sm:text-4xl font-medium text-[#F3F1EC] ">
         Safe and Secure
       </h1>
