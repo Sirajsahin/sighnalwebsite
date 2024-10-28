@@ -1,4 +1,4 @@
-import { ArrowLeftCircleIcon, ArrowRightIcon } from "@heroicons/react/20/solid";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import React from "react";
 
 const SeventhSectionComponent = () => {
