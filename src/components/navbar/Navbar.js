@@ -2,12 +2,7 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
 } from "@headlessui/react";
-import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const user = {
@@ -34,35 +29,37 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="header" className="bg-white shadow">
+    <Disclosure as="header" className="sticky top-0 bg-white shadow z-10">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between items-center">
-              {/* Logo and Navigation */}
-              <div className="flex items-center justify-between">
+              {/* Logo */}
+              <div className="flex items-center">
                 <img
                   alt="Your Company"
                   src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
                   className="h-8 w-auto"
                 />
-                <div className="hidden lg:flex space-x-8 ml-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-100 text-gray-900"
-                          : "text-gray-900 hover:bg-gray-50 hover:text-gray-900",
-                        "px-3 py-2 rounded-md text-sm font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
+              </div>
+
+              {/* Desktop Navigation */}
+              <div className="hidden lg:flex space-x-8">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={classNames(
+                      item.current
+                        ? "bg-gray-100 text-gray-900"
+                        : "text-gray-900 hover:bg-gray-50 hover:text-gray-900",
+                      "px-3 py-2 rounded-md text-sm font-medium"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </a>
+                ))}
               </div>
 
               {/* Mobile Menu Button */}
