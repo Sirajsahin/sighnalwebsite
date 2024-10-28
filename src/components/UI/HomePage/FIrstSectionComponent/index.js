@@ -15,7 +15,7 @@ const FIrstSectionComponent = () => {
           </p>
         </div>
       </div>
-      <div className="my-5">
+      <div className="my-5 xl:my-10 2xl:my-14">
         <div className="bg-[#F5F5F5] rounded-[40px] flex justify-center items-center h-[300px] sm:h-[500px]">
           <div className="w-[400px] h-auto rounded-lg bg-gray-300">
             <div className="w-[80%] h-[300px] "></div>

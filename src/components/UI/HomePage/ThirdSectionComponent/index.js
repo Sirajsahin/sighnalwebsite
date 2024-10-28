@@ -7,7 +7,7 @@ const ThirdSectionComponent = () => {
   //             </h1>
   //             <p className="text-base   w-[70%]"></p>
   return (
-    <div className="bg-[#F6F6F6] my-4 py-4 px-4 sm:px-10 xl:px-14">
+    <div className="bg-[#F6F6F6] my-4 py-4 px-4 sm:px-10 xl:px-14 2xl:px-20">
       <h1 className="text-2xl sm:text-4xl font-normal pt-3 ">
         How Sighnal helps businesses to grow
       </h1>
@@ -15,10 +15,10 @@ const ThirdSectionComponent = () => {
         Enable your customers to get answers, solve problems, and take action
         through a natural, conversational experience.
       </p>
-      <div className=" py-4 sm:py-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className=" py-4 sm:py-8 grid grid-cols-1 sm:grid-cols-2 gap-4   sm:gap-12 xl:gap-16 2xl:gap-20">
         <div className="bg-white h-[400px] rounded-2xl"></div>
-        <div className="flex flex-col gap-2 sm:gap-5">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col gap-2   sm:gap-4 xl:gap-6 ">
+          <div className="flex items-center gap-4">
             <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
@@ -30,7 +30,7 @@ const ThirdSectionComponent = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
@@ -42,7 +42,7 @@ const ThirdSectionComponent = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
@@ -54,7 +54,7 @@ const ThirdSectionComponent = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
@@ -66,7 +66,7 @@ const ThirdSectionComponent = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">

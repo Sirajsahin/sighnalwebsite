@@ -1,36 +1,75 @@
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
+import { useState } from "react";
+import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function Accordanation() {
+  const [openIndex, setOpenIndex] = useState(0); // Default to the first item
+
+  const items = [
+    {
+      title: "Data governance",
+      content: `Your data is only used for your company’s agent. We don’t use your data to train models, 
+                and we use industry standard best practices to ensure your data is secure.`,
+    },
+    {
+      title: "Secure integration",
+      content: `Your data is only used for your company’s agent. We don’t use your data to train models, 
+                and we use industry standard best practices to ensure your data is secure.`,
+    },
+    {
+      title: "Privacy compliance",
+      content: `Your data is only used for your company’s agent. We don’t use your data to train models, 
+                and we use industry standard best practices to ensure your data is secure.`,
+    },
+  ];
+
+  const handleDisclosureToggle = (index) => {
+    setOpenIndex(openIndex === index ? -1 : index); // Toggle open/close
+  };
+
   return (
-    <div className="h-auto w-full  px-4">
-      <div className="mx-auto w-full max-w-lg divide-y divide-white/5 rounded-xl bg-white/5">
-        <Disclosure as="div" className="p-6" defaultOpen={true}>
-          <DisclosureButton className="group flex w-full items-center justify-between">
-            <span className="text-sm/6 font-medium text-white group-data-[hover]:text-white/80">
-              What is your refund policy?
-            </span>
-            <ChevronDownIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
-          </DisclosureButton>
-          <DisclosurePanel className="mt-2 text-sm/5 text-white/50">
-            If you're unhappy with your purchase, we'll refund you in full.
-          </DisclosurePanel>
-        </Disclosure>
-        <Disclosure as="div" className="p-6">
-          <DisclosureButton className="group flex w-full items-center justify-between">
-            <span className="text-sm/6 font-medium text-white group-data-[hover]:text-white/80">
-              Do you offer technical support?
-            </span>
-            <ChevronDownIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
-          </DisclosureButton>
-          <DisclosurePanel className="mt-2 text-sm/5 text-white/50">
-            No.
-          </DisclosurePanel>
-        </Disclosure>
+    <div className="h-auto w-full px-4">
+      <div className="mx-auto w-full rounded-xl">
+        {items.map((item, index) => (
+          <Disclosure
+            key={index}
+            as="div"
+            className="group mt-2"
+            defaultOpen={openIndex === index}
+          >
+            {({ open }) => (
+              <div
+                className={`p-6 ${
+                  openIndex === index
+                    ? "bg-[#245A4D] rounded-lg"
+                    : "hover:bg-[#245A4D] hover:rounded-lg"
+                }`}
+              >
+                <Disclosure.Button
+                  className="group flex w-full items-center justify-between"
+                  onClick={() => handleDisclosureToggle(index)}
+                >
+                  <span className="text-base sm:text-2xl font-medium text-white">
+                    {item.title}
+                  </span>
+                  <ChevronDownIcon
+                    className={`size-5 fill-white/60 transition-transform ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </Disclosure.Button>
+                {/* {openIndex === index && ( */}
+                <Disclosure.Panel
+                  open={open}
+                  className="mt-2 text-sm sm:text-base xl:text-lg text-white/50"
+                >
+                  {item.content}
+                </Disclosure.Panel>
+                {/* )} */}
+              </div>
+            )}
+          </Disclosure>
+        ))}
       </div>
     </div>
   );

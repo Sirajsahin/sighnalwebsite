@@ -13,7 +13,7 @@ const FifthComponent = () => {
       <div className="py-3">
         <div
           role="list"
-          className="grid grid-cols-1  gap-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3"
+          className="grid grid-cols-1  gap-5   sm:gap-12 xl:gap-16 2xl:gap-20 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3"
         >
           <div className=" sm:rounded-lg  ">
             <div className="bg-[#F8F8F8]  h-64 rounded-xl"></div>

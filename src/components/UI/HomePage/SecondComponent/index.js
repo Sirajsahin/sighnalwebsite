@@ -5,7 +5,7 @@ const SecondComponent = () => {
       <h1 className="text-base  sm:text-4xl font-medium py-3 sm:py-5">
         How Sighnal helps businesses to grow
       </h1>
-      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5 sm:gap-14 w-full py-2 px-4">
+      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-12 xl:gap-16 2xl:gap-20  w-full py-2 px-4">
         <div className=" sm:rounded-lg  ">
           <div className="bg-[#F8F8F8]  h-64 rounded-xl"></div>
           <div className="">
@@ -33,7 +33,7 @@ const SecondComponent = () => {
       </div>
 
       <div className="py-3 px-3 sm:px-5 mt-2 sm:mt-6">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full py-2">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4   sm:gap-12 xl:gap-16 2xl:gap-20 w-full py-2">
           <div className=" sm:rounded-lg  ">
             <div className="bg-[#F8F8F8]  h-64 rounded-xl"></div>
             <div className="">
