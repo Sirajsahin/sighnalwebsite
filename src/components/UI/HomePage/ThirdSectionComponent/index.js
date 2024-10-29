@@ -1,6 +1,4 @@
 import React from "react";
-import { PiHandHeartLight } from "react-icons/pi";
-import { HiOutlineRocketLaunch } from "react-icons/hi2";
 
 const ThirdSectionComponent = () => {
   return (
