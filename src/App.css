@@ -26,8 +26,9 @@
 /* Global Styles */
 
 body {
-  
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif;
+
+  /* font-family: 'Helvetica Neue', sans-serif; */
 }
 
 h1 {
@@ -37,5 +38,7 @@ h1 {
 
 p {
   color: #737373;
-  font-family: 'Helvetica Neue', sans-serif;
+  /* font-family: 'Helvetica Neue', sans-serif; */
+  font-family: 'Bricolage Grotesque', sans-serif;
+
 }
