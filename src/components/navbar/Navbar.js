@@ -19,14 +19,16 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="header" className="sticky top-0 bg-white shadow z-10">
+    <Disclosure as="header" className="sticky top-0 bg-white  z-10">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="xl:mx-20 py-2  sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between items-center">
               {/* Logo */}
               <div className="flex items-center ">
-                <h1 className="text-sm sm:text-base xl:text-2xl">Sighnal</h1>
+                <h1 className="text-sm sm:text-base xl:text-4xl text-[#222222]">
+                  Sighnal
+                </h1>
               </div>
 
               {/* Desktop Navigation */}
@@ -36,10 +38,8 @@ export default function Example() {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current
-                        ? " text-gray-900"
-                        : "text-gray-900 hover:bg-gray-50 hover:text-gray-900",
-                      "px-3 py-2 rounded-md text-sm font-medium"
+                      item.current ? " text-[#222222]" : "text-[#222222] ",
+                      "px-3 py-2 rounded-md text-sm font-medium xl:text-base"
                     )}
                     aria-current={item.current ? "page" : undefined}
                   >
@@ -73,7 +73,7 @@ export default function Example() {
                   className={classNames(
                     item.current
                       ? "bg-gray-100 text-gray-900"
-                      : "text-gray-900 hover:bg-gray-50 hover:text-gray-900",
+                      : "text-[#222222]",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}

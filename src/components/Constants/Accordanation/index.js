@@ -46,7 +46,7 @@ export default function Accordanation() {
                 }`}
               >
                 <div className="flex gap-3 items-center">
-                  <span className="w-16 h-16 bg-[#E0E0E014] rounded-2xl"></span>{" "}
+                  <span className="w-[70px] h-16 bg-[#E0E0E014] rounded-2xl"></span>{" "}
                   <Disclosure.Button
                     className="group flex w-full items-center justify-between"
                     onClick={() => handleDisclosureToggle(index)}
