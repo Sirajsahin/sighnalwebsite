@@ -1,11 +1,8 @@
 import React from "react";
+import { PiHandHeartLight } from "react-icons/pi";
+import { HiOutlineRocketLaunch } from "react-icons/hi2";
 
 const ThirdSectionComponent = () => {
-  // <div className=" ">
-  //             <h1 className="text-base sm:text-2xl font-normal pt-3 ">
-  //               Decisions? Done Right, Every Time
-  //             </h1>
-  //             <p className="text-base   w-[70%]"></p>
   return (
     <div className="bg-[#F6F6F6] my-4 py-4 px-4 sm:px-10 xl:px-14 2xl:px-20">
       <h1 className="text-2xl sm:text-4xl font-normal pt-3 ">
@@ -19,7 +16,12 @@ const ThirdSectionComponent = () => {
         <div className="bg-white h-[400px] rounded-2xl"></div>
         <div className="flex flex-col gap-2   sm:gap-4 xl:gap-6 ">
           <div className="flex items-center gap-4">
-            <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
+            <div className="h-12 w-12 rounded-xl">
+              <img
+                src="https://vetic-img.s3.ap-south-1.amazonaws.com/website/Website-Astro/icons/Frame+1000004639.png"
+                alt="ph1"
+              />
+            </div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
                 Master Customer Understanding
@@ -31,7 +33,12 @@ const ThirdSectionComponent = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
+            <div className="h-12 w-12 rounded-xl">
+              <img
+                src="https://vetic-img.s3.ap-south-1.amazonaws.com/website/Website-Astro/icons/Frame+1000004639-1.png"
+                alt="ph2"
+              />
+            </div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
                 Turn Data Into Gold
@@ -43,7 +50,12 @@ const ThirdSectionComponent = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
+            <div className="h-12 w-12 rounded-xl">
+              <img
+                src="https://vetic-img.s3.ap-south-1.amazonaws.com/website/Website-Astro/icons/Frame+1000004639-2.png"
+                alt="ph2"
+              />
+            </div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
                 See Tomorrow, Act Today
@@ -55,7 +67,12 @@ const ThirdSectionComponent = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
+            <div className="h-12 w-12 rounded-xl">
+              <img
+                src="https://vetic-img.s3.ap-south-1.amazonaws.com/website/Website-Astro/icons/Frame+1000004639-3.png"
+                alt="ph3"
+              />
+            </div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
                 Build Strong Customer Loyalty
@@ -67,7 +84,12 @@ const ThirdSectionComponent = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="bg-[#E0E0E0] h-12 w-12 rounded-xl"></div>
+            <div className="h-12 w-12 rounded-xl">
+              <img
+                src="https://vetic-img.s3.ap-south-1.amazonaws.com/website/Website-Astro/icons/Frame+1000004639-4.png"
+                alt="ph4"
+              />
+            </div>
             <div>
               <h1 className="text-base sm:text-2xl font-normal">
                 Decisions? Done Right, Every Time

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Disclosure } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+// import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function Accordanation() {
   const [openIndex, setOpenIndex] = useState(0); // Default to the first item
@@ -41,27 +41,31 @@ export default function Accordanation() {
               <div
                 className={`p-6 ${
                   openIndex === index
-                    ? "bg-[#245A4D] rounded-lg"
-                    : "hover:bg-[#245A4D] hover:rounded-lg"
+                    ? "bg-[#245A4D] rounded-3xl "
+                    : "hover:bg-[#245A4D] hover:rounded-3xl "
                 }`}
               >
-                <Disclosure.Button
-                  className="group flex w-full items-center justify-between"
-                  onClick={() => handleDisclosureToggle(index)}
-                >
-                  <span className="text-base sm:text-2xl font-medium text-white">
-                    {item.title}
-                  </span>
-                  <ChevronDownIcon
+                <div className="flex gap-3 items-center">
+                  <span className="w-16 h-16 bg-[#E0E0E014] rounded-2xl"></span>{" "}
+                  <Disclosure.Button
+                    className="group flex w-full items-center justify-between"
+                    onClick={() => handleDisclosureToggle(index)}
+                  >
+                    <span className="text-base sm:text-2xl font-medium text-[#F3F1EC]">
+                      {item.title}
+                    </span>
+
+                    {/* <ChevronDownIcon
                     className={`size-5 fill-white/60 transition-transform ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
-                  />
-                </Disclosure.Button>
-                {/* {openIndex === index && ( */}
+                  /> */}
+                  </Disclosure.Button>
+                  {/* {openIndex === index && ( */}
+                </div>
                 <Disclosure.Panel
                   open={open}
-                  className="mt-2 text-sm sm:text-base xl:text-lg text-white/50"
+                  className="mt-2 text-sm sm:text-base xl:text-lg text-[#DFE3DD]"
                 >
                   {item.content}
                 </Disclosure.Panel>
