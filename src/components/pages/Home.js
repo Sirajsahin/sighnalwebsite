@@ -6,6 +6,7 @@ import FifthComponent from "../UI/HomePage/FifthComponent";
 import SixSectionComponent from "../UI/HomePage/SixSectionComponent";
 import SeventhSectionComponent from "../UI/HomePage/SeventhSectionComponent";
 import FIrstSectionComponent from "../UI/HomePage/FIrstSectionComponent";
+import Footer from "../Footer";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       </div>
       <SixSectionComponent />
       <SeventhSectionComponent />
+      <Footer />
     </div>
   );
 }
