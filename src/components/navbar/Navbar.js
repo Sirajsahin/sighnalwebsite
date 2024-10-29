@@ -37,7 +37,7 @@ export default function Example() {
                     href={item.href}
                     className={classNames(
                       item.current
-                        ? "bg-gray-100 text-gray-900"
+                        ? " text-gray-900"
                         : "text-gray-900 hover:bg-gray-50 hover:text-gray-900",
                       "px-3 py-2 rounded-md text-sm font-medium"
                     )}
