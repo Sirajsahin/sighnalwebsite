@@ -1,41 +1,17 @@
-/* Import Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Fonts */
-
-/* 
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  src: url('/src/assets/fonts/BricolageGrotesque-Regular.woff2') format('woff2'),
-       url('/src/assets/fonts/BricolageGrotesque-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.p-icon-field {
+  width: 100%;
 }
-
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/src/assets/fonts/HelveticaNeue-Regular.woff2') format('woff2'),
-       url('/src/assets/fonts/HelveticaNeue-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.p-password-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(187, 187, 187, 0.3);
+  border-radius: 5px;
 }
-*/
-
-/* Global Styles */
 
 body {
-  
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-h1 {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  color: #222222;
-}
-
-p {
-  color: #737373;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
