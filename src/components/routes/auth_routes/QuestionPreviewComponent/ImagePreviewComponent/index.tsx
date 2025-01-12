@@ -41,12 +41,16 @@ const ImagePreviewComponent = ({ data, flage, type, questionId }) => {
 
   return (
     <div
-      className={`${flage ? "grid-cols-4 grid" : "flex flex-col gap-4 h-44 overflow-auto"} gap-4 my-2`}
+      className={`${flage ? "grid-cols-4 grid" : "flex flex-col gap-4 h-64 overflow-auto scrollbar-hide"} gap-4 my-2 items-center`}
+      style={{
+        scrollbarWidth: "none", // For Firefox
+        msOverflowStyle: "none", // For IE and Edge
+      }}
     >
       {data?.map((item, id) => (
         <div
           key={id}
-          className={`relative w-full h-36 rounded-md cursor-pointer ${
+          className={`relative w-full  h-36 rounded-md cursor-pointer items-center ${
             selected.includes(id) ? " border-black border-2" : ""
           }`}
           onClick={() => handleSelect(id, item?.link)}
@@ -54,7 +58,7 @@ const ImagePreviewComponent = ({ data, flage, type, questionId }) => {
           <img
             src={item?.link}
             alt={item?.file_name}
-            className="w-full h-full rounded-md object-cover"
+            className="w-auto h-full rounded-md object-cover"
           />
           {selected.includes(id) && (
             <div className="absolute flex justify-center items-center inset-0 ">

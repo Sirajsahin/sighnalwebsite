@@ -180,13 +180,16 @@ const QuestionPreviewComponent = () => {
     const isQuestionAvalable: IuserResponse[] = userResponse?.filter(
       (item) => item.question_id === currentQuestion?.question_id
     );
-    console.log(isQuestionAvalable, "isQuestionAvalable");
-    return isQuestionAvalable?.length > 0 ? false : true;
+
+    return isQuestionAvalable?.length > 0 &&
+      isQuestionAvalable[0]?.response !== null
+      ? false
+      : true;
   };
 
   return (
     <div className="">
-      <div className="grid-cols-3 grid items-center border-b  pb-4 ">
+      <div className="grid-cols-3 grid items-center   pb-4 ">
         <div className=" flex items-center gap-3 font-bold cursor-pointer"></div>
 
         <div></div>
@@ -268,8 +271,8 @@ const QuestionPreviewComponent = () => {
           </div>
         </div>
       ) : (
-        <div className="flex items-center justify-center w-full h-full my-10">
-          <div className="border-[5px] border-opacity-20 border-gray-500 w-[370px] min-h-[700px] p-4 rounded-2xl">
+        <div className="flex items-center justify-center w-full h-full ">
+          <div className="  w-full p-4">
             <div>
               <div className="">
                 <div className="h-20 w-20 rounded-full bg-[#D9D9D9] flex items-center justify-center relative overflow-hidden cursor-pointer">
