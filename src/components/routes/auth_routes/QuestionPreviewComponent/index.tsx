@@ -159,6 +159,8 @@ const QuestionPreviewComponent = () => {
       (item) => item.question_id === userResponseToAdd.question_id
     );
 
+    // sdcdscjda
+    //
     if (!isAlreadyPresent) {
       actualData.push(userResponseToAdd);
     }
