@@ -12,7 +12,6 @@ const ImagePreviewComponent = ({ data, flage, type, questionId }) => {
   const [imageSelection, setImageSelection] = useState<string[]>(null);
 
   const handleSelect = (id: number, item: string) => {
-    // console.log(item, "ddffd");
     if (type) {
       // Multiple selection mode
       if (selected.includes(id)) {
@@ -26,14 +25,27 @@ const ImagePreviewComponent = ({ data, flage, type, questionId }) => {
       // Single selection mode
       setSelected([id]);
       setImageSelection([item]);
-    }
-    const constructedBody: IuserResponse = {
-      question_id: questionId,
-      response: imageSelection?.join("||"),
-    };
+      const constructedBody: IuserResponse = {
+        question_id: questionId,
+        response: item,
+      };
 
-    dispatch(setUserResponse({ data: [constructedBody] }));
+      dispatch(setUserResponse({ data: [constructedBody] }));
+    }
   };
+
+  useEffect(() => {
+    if (imageSelection?.length > 0) {
+      const constructedBody: IuserResponse = {
+        question_id: questionId,
+        response: imageSelection?.join(","),
+      };
+
+      dispatch(setUserResponse({ data: [constructedBody] }));
+    } else if (type) {
+      dispatch(setUserResponse({ data: [] }));
+    }
+  }, [imageSelection]);
 
   useEffect(() => {
     setSelected([]);
@@ -41,16 +53,12 @@ const ImagePreviewComponent = ({ data, flage, type, questionId }) => {
 
   return (
     <div
-      className={`${flage ? "grid-cols-4 grid" : "flex flex-col gap-4 h-64 overflow-auto scrollbar-hide"} gap-4 my-2 items-center`}
-      style={{
-        scrollbarWidth: "none", // For Firefox
-        msOverflowStyle: "none", // For IE and Edge
-      }}
+      className={`${flage ? "grid-cols-4 grid" : "flex flex-col gap-4 h-44 overflow-auto"} gap-4 my-2`}
     >
       {data?.map((item, id) => (
         <div
           key={id}
-          className={`relative w-full  h-36 rounded-md cursor-pointer items-center ${
+          className={`relative w-full h-36 rounded-md cursor-pointer ${
             selected.includes(id) ? " border-black border-2" : ""
           }`}
           onClick={() => handleSelect(id, item?.link)}
@@ -58,7 +66,7 @@ const ImagePreviewComponent = ({ data, flage, type, questionId }) => {
           <img
             src={item?.link}
             alt={item?.file_name}
-            className="w-auto h-full rounded-md object-cover"
+            className="w-full h-full rounded-md object-cover"
           />
           {selected.includes(id) && (
             <div className="absolute flex justify-center items-center inset-0 ">

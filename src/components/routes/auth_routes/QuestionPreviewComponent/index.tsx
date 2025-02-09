@@ -58,6 +58,7 @@ const QuestionPreviewComponent = () => {
       setPrevFlage(true);
     }
   }, []);
+
   const isCalled = useRef(false); // Track whether the function has been called
   useEffect(() => {
     if (!isCalled.current) {
@@ -159,14 +160,12 @@ const QuestionPreviewComponent = () => {
       (item) => item.question_id === userResponseToAdd.question_id
     );
 
-    // sdcdscjda
-    //
     if (!isAlreadyPresent) {
       actualData.push(userResponseToAdd);
     }
 
     const constructed: IUserResponseProps = {
-      mobile: "6290318957",
+      mobile: prevQuestionDetails?.mobile,
       responses: actualData,
     };
 
@@ -182,16 +181,13 @@ const QuestionPreviewComponent = () => {
     const isQuestionAvalable: IuserResponse[] = userResponse?.filter(
       (item) => item.question_id === currentQuestion?.question_id
     );
-
-    return isQuestionAvalable?.length > 0 &&
-      isQuestionAvalable[0]?.response !== null
-      ? false
-      : true;
+    console.log(isQuestionAvalable, "isQuestionAvalable");
+    return isQuestionAvalable?.length > 0 ? false : true;
   };
 
   return (
     <div className="">
-      <div className="grid-cols-3 grid items-center   pb-4 ">
+      <div className="grid-cols-3 grid items-center border-b  pb-4 ">
         <div className=" flex items-center gap-3 font-bold cursor-pointer"></div>
 
         <div></div>
@@ -273,8 +269,8 @@ const QuestionPreviewComponent = () => {
           </div>
         </div>
       ) : (
-        <div className="flex items-center justify-center w-full h-full ">
-          <div className="  w-full p-4">
+        <div className="flex items-center justify-center w-full h-full my-10">
+          <div className="border-[5px] border-opacity-20 border-gray-500 w-[370px] min-h-[700px] p-4 rounded-2xl">
             <div>
               <div className="">
                 <div className="h-20 w-20 rounded-full bg-[#D9D9D9] flex items-center justify-center relative overflow-hidden cursor-pointer">
@@ -339,6 +335,7 @@ const QuestionPreviewComponent = () => {
                     <button
                       type="submit"
                       onClick={handleContinue}
+                      disabled={isDisableButton()}
                       className={`inline-flex justify-center ${isDisableButton() ? "bg-gray-400" : "bg-[#333333]"} rounded-md px-4 py-2 text-sm font-semibold text-white cursor-pointer border-transparent`}
                     >
                       Continue
